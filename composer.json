@@ -1,5 +1,5 @@
 {
-    "name": "marekskopal/route",
+    "name": "marekskopal/router",
     "type": "library",
     "description": "Attributes extension for league/route router",
     "keywords": [
