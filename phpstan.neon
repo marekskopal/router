@@ -3,7 +3,6 @@ parameters:
     phpVersion: 80300
     parallel:
         processTimeout: 300.0
-    typeAliases:
-        uuid: string
+    checkGenericClassInNonGenericObjectType: false
     paths:
        - src
