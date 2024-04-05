@@ -8,6 +8,17 @@ composer require marekskopal/router
 
 ## Usage
 
+Create `Router` instance with `RouterBuilder` and set class directories of your controllers or actions. Optionally you can set `CacheInterface` instance for caching routes.
+
+```php
+use MarekSkopal\Router\Builder\RouterBuilder;
+
+$router = (new RouterBuilder())
+    ->setClassDirectories([__DIR__ . '/../Controllers'])
+    ->setCache(new Cache()) // optional
+    ->build();
+```    
+
 Add `Route` (or `RouteGet`,`RoutePost`,`RoutePut`,`RouteDelete`...) attribute on Class or Method you want to route to.
 
 ```php
