@@ -28,6 +28,8 @@ class RouterBuilder
         $routes = $this->cache?->get($this->cacheKey);
         if ($routes !== null) {
             $this->mapRoutes($router, $routes);
+
+            return $router;
         }
 
         foreach ($this->classDirectories as $classDirectory) {
