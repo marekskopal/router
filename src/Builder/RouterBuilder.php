@@ -18,11 +18,11 @@ class RouterBuilder
 
         foreach ($this->classDirectories as $classDirectory) {
             $routeProvider = new RouteProvider($classDirectory);
-            foreach ($routeProvider->getRoutes() as $callback => $routeAttribute) {
+            foreach ($routeProvider->getRoutes() as $classWithMethod => $routeAttribute) {
                 $router->map(
                     method: $routeAttribute->getMethod()->value,
                     path: $routeAttribute->getPath(),
-                    handler: $callback,
+                    handler: explode('::', $classWithMethod),
                 );
             }
         }

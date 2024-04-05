@@ -16,9 +16,12 @@ class RouteProviderTest extends TestCase
         $routeProvider = new RouteProvider(__DIR__ . '/../TestFile');
         $routes = $routeProvider->getRoutes();
 
-        $this->assertCount(3, $routes);
-        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileOneClass::__invoke()', $routes);
-        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileTwoClass::__invoke()', $routes);
-        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileThreeClass::__invoke()', $routes);
+        $this->assertCount(8, $routes);
+        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileOneClass::__invoke', $routes);
+        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileTwoClass::__invoke', $routes);
+        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileThreeClass::__invoke', $routes);
+        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileOneMethod::actionGet', $routes);
+        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileTwoMethod::actionGetOne', $routes);
+        $this->assertArrayHasKey('MarekSkopal\Router\Tests\TestFile\TestFileTwoMethod::actionGetTwo', $routes);
     }
 }
