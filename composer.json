@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Attributes extension for league/route",
     "keywords": [
-        "league/route",
+        "league",
         "route",
         "router",
         "attributes"
