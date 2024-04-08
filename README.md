@@ -42,7 +42,7 @@ class MyController
 ```php
 use MarekSkopal\Router\Attribute\RouteGet;
 
-#[RouteGet('GET', '/api/my/action')]
+#[RouteGet('/api/my/action')]
 class MyAction
 {
     public function __invoke(): void
