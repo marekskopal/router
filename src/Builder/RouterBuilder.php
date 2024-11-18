@@ -74,7 +74,7 @@ class RouterBuilder
             $router->map(
                 method: $routeAttribute->getMethod()->value,
                 path: $routeAttribute->getPath(),
-                handler: explode('::', $classWithMethod),
+                handler: $classWithMethod,
             );
         }
     }
