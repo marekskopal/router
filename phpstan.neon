@@ -1,8 +1,7 @@
 parameters:
-    level: 9
-    phpVersion: 80300
+    level: 10
+    phpVersion: 80100
     parallel:
         processTimeout: 300.0
-    checkGenericClassInNonGenericObjectType: false
     paths:
        - src
