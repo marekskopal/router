@@ -7,11 +7,13 @@ namespace MarekSkopal\Router\Provider;
 use MarekSkopal\Router\Attribute\Route;
 use ReflectionClass;
 
+/** @template T of object */
 class ClassRouteProvider
 {
+    /** @var ReflectionClass<T> */
     private readonly ReflectionClass $reflectionClass;
 
-    /** @param class-string $className */
+    /** @param class-string<T> $className */
     public function __construct(private readonly string $className)
     {
         $this->reflectionClass = new ReflectionClass($this->className);
