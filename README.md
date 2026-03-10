@@ -27,7 +27,7 @@ use MarekSkopal\Router\Attribute\RoutePost;
 
 class MyController
 {
-    #[Route('GET', '/api/my/name')]
+    #[Route('/api/my/name')]
     public function getName(): void
     {
     }
