@@ -26,7 +26,7 @@ vendor/bin/phpcbf
 
 ## Architecture
 
-This is a PHP library (`marekskopal/router`) that extends `league/route` with PHP 8 attribute-based route registration. Requires PHP >=8.1.
+This is a PHP library (`marekskopal/router`) that extends `league/route` with PHP 8 attribute-based route registration. Requires PHP >=8.3.
 
 **Data flow:** `RouterBuilder` → `RouteProvider` → `ClassScanner` + `ClassRouteProvider` → `league/route` Router
 
