@@ -16,6 +16,10 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(ClassRouteProvider::class)]
 class ClassRouteProviderTest extends TestCase
 {
+    /**
+     * @param class-string $class
+     * @param list<string> $expectedClassAndMethods
+     */
     #[TestWith([TestFileOneClass::class, 1, [TestFileOneClass::class . '::__invoke']])]
     #[TestWith([TestFileOneMethod::class, 1, [TestFileOneMethod::class . '::actionGet']])]
     #[TestWith([TestFileTwoMethod::class, 2, [TestFileTwoMethod::class . '::actionGetOne', TestFileTwoMethod::class . '::actionGetTwo']])]

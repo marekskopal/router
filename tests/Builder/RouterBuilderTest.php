@@ -19,6 +19,6 @@ class RouterBuilderTest extends TestCase
 
         $router = $routerBuilder->build();
 
-        $this->assertInstanceOf(Router::class, $router);
+        self::assertInstanceOf(Router::class, $router);
     }
 }

@@ -1,7 +1,15 @@
 parameters:
-    level: 10
-    phpVersion: 80100
-    parallel:
-        processTimeout: 300.0
+    level: max
+    phpVersion: 80300
     paths:
        - src
+       - tests
+
+    ignoreErrors:
+       -
+          identifier: staticMethod.alreadyNarrowedType
+          paths:
+              - tests/*
+
+includes:
+    - phar://phpstan.phar/conf/bleedingEdge.neon

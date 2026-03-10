@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(ClassScanner::class)]
 class ClassScannerTest extends TestCase
 {
+    /** @param list<class-string> $expectedClasses */
     #[TestWith([__DIR__ . '/../TestFile/TestFileOneClass.php', 1, [TestFileOneClass::class]])]
     #[TestWith([__DIR__ . '/../TestFile/TestFileTwoClass.php', 2, [TestFileTwoClass::class, TestFileThreeClass::class]])]
     public function testGetClasses(string $filePath, int $expectedCount, array $expectedClasses): void
