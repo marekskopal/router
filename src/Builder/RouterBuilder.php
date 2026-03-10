@@ -32,15 +32,14 @@ class RouterBuilder
             return $router;
         }
 
+        $allRoutes = [];
+
         foreach ($this->classDirectories as $classDirectory) {
-            $routeProvider = new RouteProvider($classDirectory);
-
-            $routes = $routeProvider->getRoutes();
-
-            $this->mapRoutes($router, $routes);
-
-            $this->cache?->set($this->cacheKey, $routes);
+            $allRoutes = array_merge($allRoutes, (new RouteProvider($classDirectory))->getRoutes());
         }
+
+        $this->mapRoutes($router, $allRoutes);
+        $this->cache?->set($this->cacheKey, $allRoutes);
 
         return $router;
     }
