@@ -5,4 +5,13 @@
     <file>src/</file>
     <file>tests/</file>
     <rule ref="ruleset.xml"/>
+    <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
+        <exclude-pattern>tests/TestFile/TestFileTwoClass.php</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.Classes.ClassFileName.NoMatch">
+        <exclude-pattern>tests/TestFile/TestFileTwoClass.php</exclude-pattern>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName.NoMatchBetweenTypeNameAndFileName">
+        <exclude-pattern>tests/TestFile/TestFileTwoClass.php</exclude-pattern>
+    </rule>
 </ruleset>
